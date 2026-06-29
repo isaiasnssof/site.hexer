@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HEXER</title>
+  <link rel="icon" type="image/png" href="assets/hexer-mark-lime.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-logo">
+      <img class="loader-mark" src="assets/hexer-logo-full.png" alt="HEXER Company"
+        width="4020" height="1175" />
+    </div>
+    <div class="loader-progress">
+      <div class="loader-fill" id="loaderFill"></div>
+    </div>
+    <p class="loader-tagline">Resultado que você pode medir.</p>
+  </div>
+
+  <!-- TOP BAR -->
+  <div class="top-bar" id="topBar">
+    <div class="top-bar-inner">
+      <span class="top-bar-pulse"></span>
+      <span>Marketing com IA para brasileiros nos EUA </span>
+      <a href="https://wa.me/5592994420438?text=Oi%2C%20quero%20falar%20sobre%20marketing%20pra%20minha%20construtora"
+        class="top-bar-cta" target="_blank" rel="noopener">Falar agora →</a>
+      <button class="top-bar-close" id="topBarClose" aria-label="Fechar">✕</button>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <a href="#hero" class="nav-logo" aria-label="HEXER — início">
+      <img class="hx-mark" src="assets/hexer-mark-lime.png" alt="HEXER" width="1107" height="1872" />
+    </a>
+
+    <nav class="nav-pill" role="navigation" aria-label="Menu principal">
+      <a href="#sobre" class="nav-link"><span class="nl-d">Sobre</span><span class="nl-h">Sobre</span></a>
+      <a href="#servicos" class="nav-link"><span class="nl-d">Serviços</span><span class="nl-h">Serviços</span></a>
+      <a href="#sistema" class="nav-link"><span class="nl-d">Sistema</span><span class="nl-h">Sistema</span></a>
+      <a href="#para-quem" class="nav-link"><span class="nl-d">Para quem é</span><span class="nl-h">Para quem é</span></a>
+      <a href="#faq" class="nav-link"><span class="nl-d">FAQ</span><span class="nl-h">FAQ</span></a>
+    </nav>
+
+    <a href="https://wa.me/5592994420438?text=Oi%2C%20quero%20falar%20sobre%20marketing%20pra%20minha%20construtora"
+      class="nav-cta" target="_blank" rel="noopener">
+      <span class="nav-cta-dot"></span>
+      Falar no WhatsApp
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false"
+      aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-menu-nav" aria-label="Menu mobile">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#sistema">Sistema</a>
+      <a href="#para-quem">Para quem é</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="https://wa.me/5592994420438?text=Oi%2C%20quero%20falar%20sobre%20marketing%20pra%20minha%20construtora"
+      class="mobile-menu-cta" target="_blank" rel="noopener">
+      <span class="nav-cta-dot"></span>
+      Falar no WhatsApp
+    </a>
+  </div>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="hero-grid-lines"></div>
+    </div>
+
+    <div class="hero-content">
+
+      <div class="hero-badge reveal-hero" data-delay="0">
+        <span class="badge-pulse"></span>
+        Para brasileiros nos EUA
+        <span class="badge-pulse"></span>
+      </div>
+
+      <h1 class="hero-h1 reveal-hero" data-delay="100">
+        <span class="hero-phrase">Mais <span class="rotate" data-words="cliente,contrato,dólar" data-interval="2500"
+            aria-live="polite"><span class="rw">cliente</span></span>.</span>
+        <span class="hero-phrase">Menos <span class="rotate rotate--plain" data-words="correria,estresse"
+            data-interval="3500" aria-live="polite"><span class="rw">correria</span></span>.</span>
+      </h1>
+
+      <p class="hero-copy reveal-hero" data-delay="260">
+        Marketing operado com IA para brasileiros nos EUA — flooring, painting,
+        remodeling, HVAC, roofing e demais serviços do setor. Você foca no <strong>serviço</strong>.
+        E nós trazemos o <strong>cliente</strong>.
+      </p>
+
+      <div class="hero-actions reveal-hero" data-delay="380">
+        <a href="https://wa.me/5592994420438?text=Oi%2C%20quero%20falar%20sobre%20marketing%20pra%20minha%20construtora"
+          class="btn-primary" target="_blank" rel="noopener">
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          Falar com um especialista
+        </a>
+      </div>
+
+    </div>
+
+    <div class="hero-scroll-hint">
+      <div class="scroll-mouse">
+        <div class="scroll-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ MARQUEE STRIP ══════════════ -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>Flooring</span><span class="sep">✦</span>
+      <span>Painting</span><span class="sep">✦</span>
+      <span>Remodeling</span><span class="sep">✦</span>
+      <span>Carpentry</span><span class="sep">✦</span>
+      <span>Cabinet</span><span class="sep">✦</span>
+      <span>Roofing</span><span class="sep">✦</span>
+      <span>HVAC</span><span class="sep">✦</span>
+      <span>Gutter</span><span class="sep">✦</span>
+      <span>Tile</span><span class="sep">✦</span>
+      <span>Hardwood</span><span class="sep">✦</span>
+      <span>Vinyl</span><span class="sep">✦</span>
+      <span>Epoxy</span><span class="sep">✦</span>
+      <span>Framing</span><span class="sep">✦</span>
+      <span>Flooring</span><span class="sep">✦</span>
+      <span>Painting</span><span class="sep">✦</span>
+      <span>Remodeling</span><span class="sep">✦</span>
+      <span>Carpentry</span><span class="sep">✦</span>
+      <span>Cabinet</span><span class="sep">✦</span>
+      <span>Roofing</span><span class="sep">✦</span>
+      <span>HVAC</span><span class="sep">✦</span>
+      <span>Gutter</span><span class="sep">✦</span>
+      <span>Tile</span><span class="sep">✦</span>
+      <span>Hardwood</span><span class="sep">✦</span>
+      <span>Vinyl</span><span class="sep">✦</span>
+      <span>Epoxy</span><span class="sep">✦</span>
+      <span>Framing</span><span class="sep">✦</span>
+    </div>
+  </div>
+
+  <!-- ══════════════ PARA QUEM É ══════════════ -->
+  <section class="para-quem section-dark" id="para-quem">
+    <div class="container">
+      <div class="section-header sr">
+        <div class="section-label">Para quem é</div>
+        <h2 class="section-h2">
+          Feito pra você.<br /><em>Se você se reconhece aqui.</em>
+        </h2>
+      </div>
+
+      <div class="pq-grid">
+
+        <!-- BLOCO ESQUERDO -->
+        <div class="pq-block pq-block--yes sr-card" data-delay="0">
+          <h3 class="pq-block-title">É para você se:</h3>
+          <ul class="pq-list">
+            <li class="pq-item">
+              <span class="pq-ico pq-ico--yes" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </span>
+              <span>Você é brasileiro, mora nos EUA e tem empresa no setor de construção</span>
+            </li>
+            <li class="pq-item">
+              <span class="pq-ico pq-ico--yes" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </span>
+              <span>Você pega job por indicação mas quer ser encontrado por cliente americano no Google</span>
+            </li>
+            <li class="pq-item">
+              <span class="pq-ico pq-ico--yes" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </span>
+              <span>Você já tentou agência antes e saiu no prejuízo</span>
+            </li>
+            <li class="pq-item">
+              <span class="pq-ico pq-ico--yes" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </span>
+              <span>Você quer o telefone tocando enquanto está no canteiro — não depois</span>
+            </li>
+            <li class="pq-item">
+              <span class="pq-ico pq-ico--yes" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </span>
+              <span>Precisa automatizar sua captação de clientes.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- BLOCO DIREITO -->
+        <div class="pq-block pq-block--no sr-card" data-delay="120">
+          <h3 class="pq-block-title pq-block-title--muted">Não é para você se:</h3>
+          <ul class="pq-list">
+            <li class="pq-item pq-item--muted">
+              <span class="pq-ico pq-ico--no" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                  <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+              </span>
+              <span>Você quer resultado da noite pro dia sem investir nada</span>
+            </li>
+            <li class="pq-item pq-item--muted">
+              <span class="pq-ico pq-ico--no" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                  <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+              </span>
+              <span>Você quer depender de indicação.</span>
+            </li>
+            <li class="pq-item pq-item--muted">
+              <span class="pq-ico pq-ico--no" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                  <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+              </span>
+              <span>Você busca a agência mais barata, não a mais eficiente</span>
+            </li>
+            <li class="pq-item pq-item--muted">
+              <span class="pq-ico pq-ico--no" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                  <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+              </span>
+              <span>Você não leva o trabalho a sério.</span>
+            </li>
+            <li class="pq-item pq-item--muted">
+              <span class="pq-ico pq-ico--no" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                  <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+              </span>
+              <span>Você quer só "postar no Instagram" sem estratégia por trás</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <p class="pq-note sr" data-delay="80">
+        Se você está no primeiro grupo, a conversa dura 20 minutos e você sai com clareza — independente de fechar ou não.
+      </p>
+
+      <div class="pq-cta sr" data-delay="120">
+        <a href="https://wa.me/5592994420438?text=Oi%2C%20quero%20falar%20sobre%20marketing%20pra%20minha%20construtora"
+          class="btn-primary" target="_blank" rel="noopener">
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          Falar com um especialista
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ SOBRE ══════════════ -->
+  <section class="sobre section-dark" id="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-left">
+          <div class="section-label sr">Sobre a agência</div>
+          <h2 class="section-h2 sr">
+            A gente conhece o seu cliente<br />
+            <em>porque cresceu vendo ele.</em>
+          </h2>
+          <p class="sobre-p sr" data-delay="100">
+            Você conhece o seu cliente americano.
+            Decide em 30 segundos no Google. Quer o estimate amanhã.
+            Dá 1 estrela se você não atender o telefone.
+          </p>
+          <p class="sobre-p sr" data-delay="140">
+            E conhece o seu cliente brasileiro.
+            Pede desconto antes de saber o preço.
+            Te indica pra cinco se você fizer direito.
+
+          </p>
+          <p class="sobre-p sr" data-delay="180">
+            A HEXER entende os dois.
+            Sistema com IA. Estratégia brasileira.
+            Resultado em dólar.
+          </p>
+          <a href="https://wa.me/5592994420438?text=Oi%2C%20quero%20falar%20sobre%20marketing%20pra%20minha%20construtora"
+            class="btn-text sr" data-delay="240" target="_blank" rel="noopener">
+            Conheça o Hexer.AI
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </a>
+        </div>
+        <div class="sobre-right">
+          <div class="sobre-values">
+
+            <div class="sobre-card sr-card" data-delay="0">
+              <span class="sobre-card-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                  <circle cx="12" cy="12" r="9" />
+                  <circle cx="12" cy="12" r="4" />
+                  <path d="M12 3v3M12 18v3M3 12h3M18 12h3" />
+                </svg>
+              </span>
+              <h4>Só construção. Mais nada.</h4>
+              <p>Quem atende padaria, salão e clínica no mesmo dia não entende o seu canteiro. A gente atende
+                <strong>só quem trabalha com construction nos EUA</strong> — sabe a sazonalidade, o ticket de cada serviço e
+                por que o americano foge de quote barato demais.</p>
+            </div>
+
+            <div class="sobre-card sr-card" data-delay="120">
+              <span class="sobre-card-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                  <path d="M12 3l1.9 5.4L19 10l-5.1 1.6L12 17l-1.9-5.4L5 10l5.1-1.6z" />
+                  <path d="M19 14l.6 1.8L21.4 16l-1.8.6L19 18.4l-.6-1.8L16.6 16l1.8-.4z" />
+                </svg>
+              </span>
+              <h4>Hexer.AI — Nosso método <strong>exclusivo</strong></h4>
+              <p>Nossa inteligência artificial faz em escala o trabalho que agência cobra caro pra fazer devagar.
+                <strong>Especialista brasileiro no comando</strong>, copy que vende em inglês e português, e você falando
+                com gente de verdade toda semana.</p>
+            </div>
+
+            <div class="sobre-card sr-card" data-delay="240">
+              <span class="sobre-card-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+                  <polyline points="16 7 22 7 22 13" />
+                </svg>
+              </span>
+              <h4>A gente conta dinheiro, não curtida</h4>
+              <p>Lead qualificado, contato no WhatsApp, visita agendada, <strong>contrato fechado em dólar</strong>. Se
+                não vira cliente, não interessa pra gente — nem entra no relatório.</p>
+            </div>
+
+          </div>
+
+          <div class="sobre-trust sr" data-delay="200">
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12" /></svg>
+              Você aprova cada peça antes de ir pro ar
+            </span>
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12" /></svg>
+              Sem contrato de fidelidade longo
+            </span>
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12" /></svg>
+              Pagamento somente 1 vez.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ SISTEMA HEXER ══════════════ -->
+  <section class="sistema section-dark" id="sistema">
+    <div class="container">
+      <div class="section-header sr">
+        <div class="section-label">Método exclusivo</div>
+        <h2 class="section-h2">
+          Hexer.AI —<br /><em>Nossa inteligência artificial</em>
+        </h2>
+        <p class="section-sub sr" data-delay="100">
+          Todo cliente que entra com a gente, roda no Hexer.AI: nossa inteligência artificial treinada no mercado de
+          construção, operando lado a lado com um especialista.
+        </p>
+      </div>
+
+      <div class="sistema-grid">
+        <div class="sistema-card sr-card" data-delay="0">
+          <div class="sistema-step">Pilar 01</div>
+          <div class="sistema-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              <circle cx="11" cy="11" r="8" />
+              <path d="M21 21l-4.35-4.35" />
+              <path d="M11 8v3l2 2" />
+            </svg>
+          </div>
+          <h3>Decodificação</h3>
+          <p>Auditamos seu Google Meu Negócio, site, redes, reviews e a concorrência. Você sai
+            sabendo onde está vazando dinheiro — mesmo que decida não fechar com a gente.</p>
+          <ul class="sistema-list">
+            <li>mapeia demanda e concorrência local</li>
+            <li>Auditoria do GMB e do funil atual</li>
+            <li>Mapa de oportunidades em 5 milhas</li>
+          </ul>
+        </div>
+
+        <div class="sistema-connector sr-card" data-delay="80" aria-hidden="true">
+          <div class="sistema-arrow">→</div>
+        </div>
+
+        <div class="sistema-card sr-card" data-delay="160">
+          <div class="sistema-step">Pilar 02</div>
+          <div class="sistema-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              <path
+                d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
+            </svg>
+          </div>
+          <h3>Construção</h3>
+          <p>Setup do Hexer.AI: GMB otimizado, primeiro lote de conteúdo, campanhas montadas. Você aprova cada
+            peça antes de ir pro ar.</p>
+          <ul class="sistema-list">
+            <li>A Hexer.AI produz carrosséis automáticamente.</li>
+            <li>Monta a campanha.</li>
+            <li>Site bilíngue no ar em até 3 dias após o pagamento.</li>
+          </ul>
+        </div>
+
+        <div class="sistema-connector sr-card" data-delay="240" aria-hidden="true">
+          <div class="sistema-arrow">→</div>
+        </div>
+
+        <div class="sistema-card sr-card" data-delay="320">
+          <div class="sistema-step">Pilar 03</div>
+          <div class="sistema-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+              <polyline points="16 7 22 7 22 13" />
+            </svg>
+          </div>
+          <h3>Operação & Escala</h3>
+          <p>Execução semanal automática + reunião com o especialista. Quando achamos o que converte, escalamos. Sem
+            mistério, sem desculpa.</p>
+          <ul class="sistema-list">
+            <li>Relatórios semanal com alertas</li>
+            <li>Otimizar sua reputação no Google</li>
+            <li>Escala controlada do que está funcionando</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ SERVIÇOS ══════════════ -->
+  <section class="servicos section-dark" id="servicos">
+    <div class="container">
+      <div class="section-header sr">
+        <div class="section-label">O que fazemos</div>
+        <h2 class="section-h2">
+          Quatro frentes.<br /><em>Um objetivo: o seu telefone tocando.</em>
+        </h2>
+      </div>
+
+      <div class="cards-grid">
+
+        <div class="card sr-card" data-delay="0">
+          <div class="card-inner">
+            <div class="card-num">01</div>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <path d="M8 21h8M12 17v4" />
+              </svg>
+            </div>
+            <h3>Site Profissional</h3>
+            <p>Sites e páginas bilíngues que carregam em 2 segundos e dizem a coisa certa no segundo certo. A maioria
+              dos sites de construtora brasileira nos EUA parece feita pra ninguém comprar — o seu não vai ser assim.
+            </p>
+            <div class="card-footer">
+              <span class="card-kpi">→ Conversão média 4x acima do padrão do setor.</span>
+            </div>
+          </div>
+          <div class="card-glow-border"></div>
+        </div>
+
+        <div class="card sr-card" data-delay="100">
+          <div class="card-inner">
+            <div class="card-num">02</div>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path
+                  d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" />
+              </svg>
+            </div>
+            <h3>Identidade Visual</h3>
+            <p>Você cobra hoje o que a sua marca permite cobrar. Construímos identidade que comunica autoridade antes do
+              cliente ler uma linha — pra você subir preço sem perder cliente.</p>
+            <div class="card-footer">
+              <span class="card-kpi">→ +85% de ticket médio em rebrandings recentes.</span>
+            </div>
+          </div>
+          <div class="card-glow-border"></div>
+        </div>
+
+        <div class="card sr-card" data-delay="200">
+          <div class="card-inner">
+            <div class="card-num">03</div>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                <polyline points="2 17 12 22 22 17" />
+                <polyline points="2 12 12 17 22 12" />
+              </svg>
+            </div>
+            <h3>Carrosséis com IA</h3>
+            <p>Nossa IA cria os carrosséis e posts da sua construtora no automático — em português, inglês ou nos dois —
+              e a gente revisa antes de publicar. Seu Instagram fica ativo e profissional sem você largar a furadeira pra
+              pensar em post.</p>
+            <div class="card-footer">
+              <span class="card-kpi">→ Feed sempre ativo, sem parar o serviço pra postar.</span>
+            </div>
+          </div>
+          <div class="card-glow-border"></div>
+        </div>
+
+        <div class="card card--feature sr-card" data-delay="300">
+          <div class="card-inner">
+            <div class="card-num">04</div>
+            <span class="card-tag">Diferencial Hexer</span>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <rect x="4" y="8" width="16" height="11" rx="3" />
+                <path d="M12 5.5V8" />
+                <circle cx="12" cy="4" r="1.6" />
+                <circle cx="9" cy="13" r="1.1" fill="currentColor" stroke="none" />
+                <circle cx="15" cy="13" r="1.1" fill="currentColor" stroke="none" />
+                <path d="M2 12.5v3M22 12.5v3" />
+              </svg>
+            </div>
+            <h3>Agente de IA</h3>
+            <p>Um agente que atende seu WhatsApp e seu cliente na hora — tira dúvida, qualifica o job e agenda o estimate
+              enquanto você está no canteiro com a furadeira na mão. O americano que liga e não é atendido em minutos já
+              ligou pro próximo. Com o agente, o seu não escapa.</p>
+            <div class="card-footer">
+              <span class="card-kpi">→ Cliente respondido em segundos, dia e noite — não em 2 dias.</span>
+            </div>
+          </div>
+          <div class="card-glow-border"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ PROCESSO ══════════════ -->
+  <section class="processo section-light" id="processo">
+    <div class="container">
+      <div class="section-header sr">
+        <div class="section-label label-dark">Como funciona</div>
+        <h2 class="section-h2 dark-text">
+          Do primeiro WhatsApp<br /><em class="em-purple">ao primeiro contato pelo Google.</em>
+        </h2>
+        <p class="section-sub dark-sub sr" data-delay="100">
+          Simples, direto e sem ritual de venda — do jeito que bom trabalho deve ser.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="steps-pin-wrap" id="stepsPinWrap">
+      <div class="steps-stack" id="stepsStack">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <div class="step-body">
+            <h3>Conversa franca · 20 minutos</h3>
+            <p>Você fala, a gente escuta. Sem pitch, sem slide. Entendemos seu negócio, sua região e sua sazonalidade.
+            </p>
+            <span class="step-time">⏱ Agendado pelo WhatsApp — em geral no mesmo dia</span>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <div class="step-body">
+            <h3>Diagnóstico do canteiro</h3>
+            <p>Auditamos GMB, site, redes, reviews e concorrência local. Você recebe três ações imediatas — mesmo se
+              decidir não fechar com a gente.</p>
+            <span class="step-time">⏱ 48–72h</span>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <div class="step-body">
+            <h3>Recomendação da fase certa</h3>
+            <p>Nada de pacote genérico. O especialista recomenda a fase certa pro seu momento, com escopo e prazo
+              claros. Você aprova antes de começarmos.</p>
+            <span class="step-time">⏱ 48h</span>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <div class="step-body">
+            <h3>Hexer.AI ativado</h3>
+            <p>Especialista pronto, inteligência artificial configurada, primeira semana rodando. Você acompanha tudo em
+              tempo real.</p>
+            <span class="step-time">⏱ início em até <strong>3 dias</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="processo-cta sr">
+        <p>Pronto pra fazer o telefone tocar?</p>
+        <a href="https://wa.me/5592994420438?text=Oi%2C%20quero%20falar%20sobre%20marketing%20pra%20minha%20construtora"
+          class="btn-primary btn-dark" target="_blank" rel="noopener">
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          Falar com um especialista
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FAQ ══════════════ -->
+  <section class="faq section-dark" id="faq">
+    <div class="container">
+      <div class="faq-inner">
+        <div class="faq-left">
+          <div class="section-label sr">Dúvidas frequentes</div>
+          <h2 class="section-h2 sr">
+            Tudo que você<br />precisa saber<br /><em>antes da conversa.</em>
+          </h2>
+          <p class="faq-sub sr" data-delay="100">
+            Não encontrou a resposta? Fale com a gente diretamente no WhatsApp.
+          </p>
+          <a href="https://wa.me/5592994420438?text=Oi%2C%20quero%20falar%20sobre%20marketing%20pra%20minha%20construtora"
+            class="btn-text sr" data-delay="200" target="_blank" rel="noopener">
+            Falar com especialista
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="faq-right">
+          <div class="faq-item sr" data-delay="0">
+            <button class="faq-question" aria-expanded="false">
+              <span>O que diferencia a HEXER de outras agências?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Três coisas. Atendemos exclusivamente construção brasileira na Flórida — não dividimos atenção com
+                padaria, salão e clínica. Operamos com o Hexer.AI, nossa inteligência artificial própria — método
+                exclusivo que entrega muito sem cobrar fortuna. E você fala direto com o especialista, não com gerente de
+                conta.</p>
+            </div>
+          </div>
+
+          <div class="faq-item sr" data-delay="80">
+            <button class="faq-question" aria-expanded="false">
+              <span>Quanto tempo leva para ver resultados?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Tráfego pago: primeiros leads em 14 a 30 dias. SEO local e Google Meu Negócio: primeiros contatos em 60
+                a 90 dias. Se a expectativa é "telefone tocando amanhã sem investir nada", a gente avisa logo: ninguém
+                honesto promete isso.</p>
+            </div>
+          </div>
+
+          <div class="faq-item sr" data-delay="160">
+            <button class="faq-question" aria-expanded="false">
+              <span>Vocês atendem qualquer nicho ou segmento?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Não. Trabalhamos só com construtoras e prestadores de serviço braçal brasileiros nos EUA — flooring,
+                painting, remodeling, HVAC, roofing e afins. Foco atual de operações: Orlando e Tampa. Outras regiões da
+                Flórida, mediante avaliação na conversa.</p>
+            </div>
+          </div>
+
+          <div class="faq-item sr" data-delay="240">
+            <button class="faq-question" aria-expanded="false">
+              <span>Existe contrato de fidelidade longo?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Recomendamos 3 meses iniciais — tempo mínimo pra gerar dado real, não impressão. Depois é mensal, você
+                decide. A maioria renova — e nenhum por contrato.</p>
+            </div>
+          </div>
+
+          <div class="faq-item sr" data-delay="320">
+            <button class="faq-question" aria-expanded="false">
+              <span>Como funciona o acompanhamento dos resultados?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Reunião semanal de 30 minutos com o especialista que cuida do seu negócio, dashboard com métricas em
+                tempo real e WhatsApp direto entre as reuniões. Você sabe o que está sendo feito, por quê e qual o
+                retorno — semana após semana.</p>
+            </div>
+          </div>
+
+          <div class="faq-item sr" data-delay="400">
+            <button class="faq-question" aria-expanded="false">
+              <span>Qual é o investimento mínimo para começar?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Depende da fase e do seu momento — por isso fechamos valor na conversa, não numa tabela. Em 20 minutos
+                o especialista entende seu negócio e recomenda o caminho certo, com investimento claro. A verba de
+                anúncios é paga direto por você, na sua conta do Google e da Meta.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ CTA FINAL ══════════════ -->
+  <section class="cta-final section-dark" id="contato">
+    <div class="cta-orb-1" aria-hidden="true"></div>
+    <div class="cta-orb-2" aria-hidden="true"></div>
+    <div class="container">
+      <div class="cta-inner sr">
+        <div class="section-label">Próximo passo</div>
+        <h2 class="cta-h2">
+          20 minutos de conversa.<br />
+          <em>12 meses de resultado.</em>
+        </h2>
+        <p class="cta-p">
+          Uma conversa franca sobre o seu negócio revela onde está vazando dinheiro hoje — e a maior
+          oportunidade para os próximos 90 dias.
+        </p>
+        <div class="cta-badges">
+          <span class="cta-badge">✓ Conversa direta</span>
+          <span class="cta-badge">✓ Resposta em até 2h</span>
+        </div>
+        <a href="https://wa.me/5592994420438?text=Oi%2C%20quero%20falar%20sobre%20marketing%20pra%20minha%20construtora"
+          class="btn-primary btn-xl" target="_blank" rel="noopener">
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          Falar com um especialista no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="footer-logo" aria-label="HEXER Company — início">
+            <img class="footer-wordmark" src="assets/2LOGO-HEXER.png" alt="HEXER Company" width="4019"
+              height="1174" />
+          </a>
+          <p>Você constrói.<br>A gente faz o telefone tocar.<br><br>Marketing operado com IA para brasileiros nos
+            EUA</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/hexer.company/" target="_blank" rel="noopener"
+              class="footer-social-link" aria-label="Instagram da HEXER">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5.5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1.3" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+            <a href="https://wa.me/5592994420438?text=Oi%2C%20quero%20falar%20sobre%20marketing%20pra%20minha%20construtora"
+              target="_blank" rel="noopener" class="footer-social-link" aria-label="WhatsApp da HEXER">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <a href="#sobre">Sobre</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#sistema">Sistema</a>
+          <a href="#para-quem">Para quem é</a>
+          <a href="#faq">FAQ</a>
+          <a href="https://wa.me/5592994420438" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://www.instagram.com/hexer.company/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 HEXER. Operado com IA. Provado em dólar.</p>
+        <p>Feito com estratégia. Provado com dados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/5592994420438?text=Oi%2C%20quero%20falar%20sobre%20marketing%20pra%20minha%20construtora"
+    class="fab-wa" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+    <span class="fab-wa-label">Falar agora</span>
+  </a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
