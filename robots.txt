@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hexercompany.com/sitemap.xml
