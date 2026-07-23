@@ -1008,6 +1008,14 @@ section { position: relative; }
   color: var(--ink); background: var(--lime); border-color: var(--lime);
   transform: translateY(-3px);
 }
+.footer-email {
+  display: inline-block; margin-top: 20px;
+  font-size: 13.5px; color: var(--text-2);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+  transition: color .25s, border-color .25s;
+}
+.footer-email:hover { color: var(--lime); border-color: var(--lime); }
 
 .footer-cols { display: flex; gap: 72px; flex-wrap: wrap; }
 .footer-col h4 {
